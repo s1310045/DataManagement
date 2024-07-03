@@ -3,6 +3,10 @@
 #include <time.h>
 
 int main(){
+    char name[50];
+    printf("Who are you?\n> ");
+    scanf("%s", name);
+    printf("Hello, %s!\n", name);
 
     srand(time(0));
 
@@ -24,9 +28,9 @@ int main(){
     printf("Heads: %d, Tails: %d\n", heads, tails);
 
     if(heads > tails){
-        printf("You won!\n");
+        printf("%s won!\n", name);
     } else{
-        printf("You lost!\n");
+        printf("%s lost!\n", name);
     }
     
     return 0;
